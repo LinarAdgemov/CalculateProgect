@@ -1,24 +1,375 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5tT-ZO-VaL">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="fmS-fT-eG3">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="5tT-ZO-VaL" customClass="ViewController" customModule="Calculate_Progect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1hW-Ix-eAA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXY-KA-v3P">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N9D-mn-JPy">
+                                        <rect key="frame" x="16" y="50" width="382" height="80"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="AnK-yN-kqp"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="46"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2a-pX-EFY">
+                                        <rect key="frame" x="16" y="146" width="83.666666666666671" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="C">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="deleteDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="2Nj-Fy-1rg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9g-fo-yaW">
+                                        <rect key="frame" x="115.66666666666669" y="146" width="83.333333333333314" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="+/-">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="plusMinusPressef:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="sXo-Qp-bzP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liR-Zq-0F4">
+                                        <rect key="frame" x="214.99999999999997" y="146" width="83.666666666666657" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="%">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="precentDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="uqe-x6-iWx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgx-af-HoH">
+                                        <rect key="frame" x="314.66666666666669" y="146" width="83.333333333333314" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="/">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="actionDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="GHM-Ae-XiZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdI-K3-crv">
+                                        <rect key="frame" x="16" y="242" width="83.666666666666671" height="80"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="1">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="digitDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="Bg5-qe-MeL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbT-3r-bRd">
+                                        <rect key="frame" x="115.66666666666669" y="242" width="83.333333333333314" height="80"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="2">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="digitDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="H4J-FR-YzX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGL-fZ-Udz">
+                                        <rect key="frame" x="214.99999999999997" y="242" width="83.666666666666657" height="80"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="3">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="digitDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="BbZ-vq-Gyo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QL3-gH-vep">
+                                        <rect key="frame" x="314.66666666666669" y="242" width="83.333333333333314" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="25"/>
+                                        <color key="tintColor" red="0.034055572200000002" green="0.034055572200000002" blue="0.034055572200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="D9v-V7-qtM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HR0-sd-5r1">
+                                        <rect key="frame" x="16" y="338" width="83.666666666666671" height="80"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="4">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="digitDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="aZv-VM-vVT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYH-Qv-Xsb">
+                                        <rect key="frame" x="115.66666666666669" y="338" width="83.333333333333314" height="80"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="5">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="digitDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="Fde-TT-KLG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8p-iQ-0uD">
+                                        <rect key="frame" x="214.99999999999997" y="338" width="83.666666666666657" height="80"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="6">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="digitDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="vrF-Lc-1up"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8D-Qc-8fe">
+                                        <rect key="frame" x="314.66666666666669" y="338" width="83.333333333333314" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="-">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="actionDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="Ta6-3k-DJe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ker-zZ-Ohy">
+                                        <rect key="frame" x="16" y="434" width="83.666666666666671" height="80"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="7">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="digitDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="cO4-ry-MF6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4o-4D-5ZE">
+                                        <rect key="frame" x="115.66666666666669" y="434" width="83.333333333333314" height="80"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="8">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="digitDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="qNn-T4-S8u"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qh-CS-jWK">
+                                        <rect key="frame" x="214.99999999999997" y="434" width="83.666666666666657" height="80"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="9">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="digitDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="Aqd-hC-UPL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5u-Np-7Ai">
+                                        <rect key="frame" x="314.66666666666669" y="434" width="83.333333333333314" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="+">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="actionDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="trC-5F-V9C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u10-kZ-8N1">
+                                        <rect key="frame" x="16" y="530" width="183" height="80"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="0">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="digitDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="V7s-eL-Vle"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFx-zT-BZz">
+                                        <rect key="frame" x="214.99999999999997" y="530" width="83.666666666666657" height="80"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=".">
+                                            <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="dotButtonPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="irM-Re-cOW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yu-vl-xx2">
+                                        <rect key="frame" x="314.66666666666669" y="530" width="83.333333333333314" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="=">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="equals:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="sAN-OH-Fq3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.065978060059999996" green="0.065978060059999996" blue="0.065978060059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="5yu-vl-xx2" firstAttribute="height" secondItem="u10-kZ-8N1" secondAttribute="height" id="0Ue-0y-qAV"/>
+                                    <constraint firstItem="liR-Zq-0F4" firstAttribute="height" secondItem="N2a-pX-EFY" secondAttribute="height" id="1fe-sP-0MX"/>
+                                    <constraint firstItem="a8p-iQ-0uD" firstAttribute="leading" secondItem="YYH-Qv-Xsb" secondAttribute="trailing" constant="16" id="2vC-d2-Gxm"/>
+                                    <constraint firstItem="GbT-3r-bRd" firstAttribute="top" secondItem="sdI-K3-crv" secondAttribute="top" id="38y-jd-quF"/>
+                                    <constraint firstItem="cGL-fZ-Udz" firstAttribute="leading" secondItem="GbT-3r-bRd" secondAttribute="trailing" constant="16" id="45r-Y6-3oF"/>
+                                    <constraint firstItem="u10-kZ-8N1" firstAttribute="height" secondItem="N9D-mn-JPy" secondAttribute="height" id="5I5-ZO-txC"/>
+                                    <constraint firstItem="YYH-Qv-Xsb" firstAttribute="height" secondItem="HR0-sd-5r1" secondAttribute="height" id="5so-Uk-bLu"/>
+                                    <constraint firstItem="a8p-iQ-0uD" firstAttribute="width" secondItem="HR0-sd-5r1" secondAttribute="width" id="8g5-X9-fMm"/>
+                                    <constraint firstItem="5yu-vl-xx2" firstAttribute="width" secondItem="iFx-zT-BZz" secondAttribute="width" id="9RW-3y-6F2"/>
+                                    <constraint firstItem="5yu-vl-xx2" firstAttribute="top" secondItem="u10-kZ-8N1" secondAttribute="top" id="Af8-Y4-jSE"/>
+                                    <constraint firstItem="QL3-gH-vep" firstAttribute="leading" secondItem="cGL-fZ-Udz" secondAttribute="trailing" constant="16" id="As0-Xj-feg"/>
+                                    <constraint firstItem="O8D-Qc-8fe" firstAttribute="width" secondItem="HR0-sd-5r1" secondAttribute="width" id="C6g-hK-3P0"/>
+                                    <constraint firstItem="liR-Zq-0F4" firstAttribute="top" secondItem="N2a-pX-EFY" secondAttribute="top" id="CUb-Ia-7de"/>
+                                    <constraint firstItem="QL3-gH-vep" firstAttribute="top" secondItem="sdI-K3-crv" secondAttribute="top" id="Da3-hN-ggo"/>
+                                    <constraint firstItem="p4o-4D-5ZE" firstAttribute="height" secondItem="ker-zZ-Ohy" secondAttribute="height" id="Dkn-wz-i1t"/>
+                                    <constraint firstItem="HR0-sd-5r1" firstAttribute="leading" secondItem="N9D-mn-JPy" secondAttribute="leading" id="EtJ-ZK-7sS"/>
+                                    <constraint firstItem="Bgx-af-HoH" firstAttribute="top" secondItem="N2a-pX-EFY" secondAttribute="top" id="IKU-1Z-c2g"/>
+                                    <constraint firstItem="O8D-Qc-8fe" firstAttribute="top" secondItem="HR0-sd-5r1" secondAttribute="top" id="Ien-WX-I8b"/>
+                                    <constraint firstItem="cGL-fZ-Udz" firstAttribute="height" secondItem="sdI-K3-crv" secondAttribute="height" id="Iu4-6O-AqA"/>
+                                    <constraint firstItem="p4o-4D-5ZE" firstAttribute="top" secondItem="ker-zZ-Ohy" secondAttribute="top" id="Kv3-sw-FiD"/>
+                                    <constraint firstItem="Z9g-fo-yaW" firstAttribute="top" secondItem="N2a-pX-EFY" secondAttribute="top" id="LBi-pD-cru"/>
+                                    <constraint firstItem="QL3-gH-vep" firstAttribute="width" secondItem="sdI-K3-crv" secondAttribute="width" id="LCM-F1-gm2"/>
+                                    <constraint firstItem="N9D-mn-JPy" firstAttribute="leading" secondItem="VXY-KA-v3P" secondAttribute="leading" constant="16" id="MeS-4c-FEw"/>
+                                    <constraint firstItem="5yu-vl-xx2" firstAttribute="trailing" secondItem="N9D-mn-JPy" secondAttribute="trailing" id="Pc1-D8-xTY"/>
+                                    <constraint firstItem="liR-Zq-0F4" firstAttribute="leading" secondItem="Z9g-fo-yaW" secondAttribute="trailing" constant="16" id="QCD-eJ-wsP"/>
+                                    <constraint firstItem="1Qh-CS-jWK" firstAttribute="top" secondItem="ker-zZ-Ohy" secondAttribute="top" id="RGS-cp-iGf"/>
+                                    <constraint firstItem="b5u-Np-7Ai" firstAttribute="width" secondItem="ker-zZ-Ohy" secondAttribute="width" id="RQh-jL-PXe"/>
+                                    <constraint firstItem="Z9g-fo-yaW" firstAttribute="width" secondItem="N2a-pX-EFY" secondAttribute="width" id="Rqe-NX-zTS"/>
+                                    <constraint firstItem="HR0-sd-5r1" firstAttribute="top" secondItem="sdI-K3-crv" secondAttribute="bottom" constant="16" id="SJ9-4f-fVD"/>
+                                    <constraint firstItem="Z9g-fo-yaW" firstAttribute="leading" secondItem="N2a-pX-EFY" secondAttribute="trailing" constant="16" id="SkP-DD-In6"/>
+                                    <constraint firstItem="a8p-iQ-0uD" firstAttribute="height" secondItem="HR0-sd-5r1" secondAttribute="height" id="T8J-LE-RBE"/>
+                                    <constraint firstItem="b5u-Np-7Ai" firstAttribute="trailing" secondItem="N9D-mn-JPy" secondAttribute="trailing" id="Td0-oE-Ruc"/>
+                                    <constraint firstItem="b5u-Np-7Ai" firstAttribute="leading" secondItem="1Qh-CS-jWK" secondAttribute="trailing" constant="16" id="Tpw-SQ-aHI"/>
+                                    <constraint firstItem="5yu-vl-xx2" firstAttribute="leading" secondItem="iFx-zT-BZz" secondAttribute="trailing" constant="16" id="W1o-RH-q1U"/>
+                                    <constraint firstItem="HR0-sd-5r1" firstAttribute="height" secondItem="N9D-mn-JPy" secondAttribute="height" id="W9n-2w-YQ6"/>
+                                    <constraint firstItem="Z9g-fo-yaW" firstAttribute="height" secondItem="N2a-pX-EFY" secondAttribute="height" id="WJP-qM-coR"/>
+                                    <constraint firstItem="N2a-pX-EFY" firstAttribute="height" secondItem="N9D-mn-JPy" secondAttribute="height" id="Wi7-mV-ggX"/>
+                                    <constraint firstItem="GbT-3r-bRd" firstAttribute="height" secondItem="sdI-K3-crv" secondAttribute="height" id="Wq6-yg-YWl"/>
+                                    <constraint firstItem="u10-kZ-8N1" firstAttribute="trailing" secondItem="p4o-4D-5ZE" secondAttribute="trailing" id="Y7e-6Y-pxl"/>
+                                    <constraint firstItem="iFx-zT-BZz" firstAttribute="leading" secondItem="u10-kZ-8N1" secondAttribute="trailing" constant="16" id="Yxd-cg-fzS"/>
+                                    <constraint firstItem="Bgx-af-HoH" firstAttribute="leading" secondItem="liR-Zq-0F4" secondAttribute="trailing" constant="16" id="ZZh-Pm-NPR"/>
+                                    <constraint firstItem="sdI-K3-crv" firstAttribute="top" secondItem="N2a-pX-EFY" secondAttribute="bottom" constant="16" id="bWd-MV-7fv"/>
+                                    <constraint firstItem="sdI-K3-crv" firstAttribute="leading" secondItem="N9D-mn-JPy" secondAttribute="leading" id="cVp-II-jFF"/>
+                                    <constraint firstItem="YYH-Qv-Xsb" firstAttribute="top" secondItem="HR0-sd-5r1" secondAttribute="top" id="ceV-XU-2US"/>
+                                    <constraint firstItem="p4o-4D-5ZE" firstAttribute="width" secondItem="ker-zZ-Ohy" secondAttribute="width" id="d20-bU-CkT"/>
+                                    <constraint firstItem="ker-zZ-Ohy" firstAttribute="leading" secondItem="N9D-mn-JPy" secondAttribute="leading" id="doE-0O-Lz4"/>
+                                    <constraint firstItem="Bgx-af-HoH" firstAttribute="height" secondItem="N2a-pX-EFY" secondAttribute="height" id="drQ-mD-rOO"/>
+                                    <constraint firstItem="O8D-Qc-8fe" firstAttribute="leading" secondItem="a8p-iQ-0uD" secondAttribute="trailing" constant="16" id="enc-45-5W0"/>
+                                    <constraint firstItem="O8D-Qc-8fe" firstAttribute="height" secondItem="HR0-sd-5r1" secondAttribute="height" id="eon-RK-SgR"/>
+                                    <constraint firstItem="YYH-Qv-Xsb" firstAttribute="leading" secondItem="HR0-sd-5r1" secondAttribute="trailing" constant="16" id="fCR-IM-IeD"/>
+                                    <constraint firstItem="QL3-gH-vep" firstAttribute="height" secondItem="sdI-K3-crv" secondAttribute="height" id="fxu-ob-5oY"/>
+                                    <constraint firstItem="GbT-3r-bRd" firstAttribute="leading" secondItem="sdI-K3-crv" secondAttribute="trailing" constant="16" id="g1q-M7-VVe"/>
+                                    <constraint firstItem="Bgx-af-HoH" firstAttribute="width" secondItem="N2a-pX-EFY" secondAttribute="width" id="gHU-vy-KqH"/>
+                                    <constraint firstItem="liR-Zq-0F4" firstAttribute="width" secondItem="N2a-pX-EFY" secondAttribute="width" id="gRD-eQ-lOF"/>
+                                    <constraint firstItem="QL3-gH-vep" firstAttribute="trailing" secondItem="N9D-mn-JPy" secondAttribute="trailing" id="ghr-lb-yuz"/>
+                                    <constraint firstItem="cGL-fZ-Udz" firstAttribute="top" secondItem="sdI-K3-crv" secondAttribute="top" id="hEZ-Ox-zxN"/>
+                                    <constraint firstItem="N9D-mn-JPy" firstAttribute="top" secondItem="VXY-KA-v3P" secondAttribute="top" constant="50" id="hRF-s9-Csf"/>
+                                    <constraint firstItem="YYH-Qv-Xsb" firstAttribute="width" secondItem="HR0-sd-5r1" secondAttribute="width" id="iBv-Rs-5p0"/>
+                                    <constraint firstItem="b5u-Np-7Ai" firstAttribute="height" secondItem="ker-zZ-Ohy" secondAttribute="height" id="jn5-pA-wrg"/>
+                                    <constraint firstItem="u10-kZ-8N1" firstAttribute="leading" secondItem="N9D-mn-JPy" secondAttribute="leading" id="kCr-jD-hsd"/>
+                                    <constraint firstItem="ker-zZ-Ohy" firstAttribute="top" secondItem="HR0-sd-5r1" secondAttribute="bottom" constant="16" id="kW3-n6-NAH"/>
+                                    <constraint firstItem="Bgx-af-HoH" firstAttribute="trailing" secondItem="N9D-mn-JPy" secondAttribute="trailing" id="koR-kn-der"/>
+                                    <constraint firstItem="1Qh-CS-jWK" firstAttribute="leading" secondItem="p4o-4D-5ZE" secondAttribute="trailing" constant="16" id="lNi-9M-9jB"/>
+                                    <constraint firstItem="GbT-3r-bRd" firstAttribute="width" secondItem="sdI-K3-crv" secondAttribute="width" id="lTn-Q9-MYE"/>
+                                    <constraint firstItem="1Qh-CS-jWK" firstAttribute="height" secondItem="ker-zZ-Ohy" secondAttribute="height" id="mjP-bZ-E48"/>
+                                    <constraint firstItem="b5u-Np-7Ai" firstAttribute="top" secondItem="ker-zZ-Ohy" secondAttribute="top" id="n13-mW-k7Q"/>
+                                    <constraint firstItem="ker-zZ-Ohy" firstAttribute="height" secondItem="N9D-mn-JPy" secondAttribute="height" id="pC1-Wi-3t6"/>
+                                    <constraint firstItem="iFx-zT-BZz" firstAttribute="top" secondItem="u10-kZ-8N1" secondAttribute="top" id="pbb-kY-zTR"/>
+                                    <constraint firstItem="cGL-fZ-Udz" firstAttribute="width" secondItem="sdI-K3-crv" secondAttribute="width" id="qJj-iI-ZIy"/>
+                                    <constraint firstAttribute="trailing" secondItem="N9D-mn-JPy" secondAttribute="trailing" constant="16" id="qSX-hz-boH"/>
+                                    <constraint firstItem="sdI-K3-crv" firstAttribute="height" secondItem="N9D-mn-JPy" secondAttribute="height" id="rxO-NC-f6A"/>
+                                    <constraint firstItem="a8p-iQ-0uD" firstAttribute="top" secondItem="HR0-sd-5r1" secondAttribute="top" id="v8V-wS-Cf5"/>
+                                    <constraint firstItem="iFx-zT-BZz" firstAttribute="height" secondItem="u10-kZ-8N1" secondAttribute="height" id="v9V-kb-tTA"/>
+                                    <constraint firstItem="O8D-Qc-8fe" firstAttribute="trailing" secondItem="N9D-mn-JPy" secondAttribute="trailing" id="wF5-5b-Hdq"/>
+                                    <constraint firstItem="N2a-pX-EFY" firstAttribute="top" secondItem="N9D-mn-JPy" secondAttribute="bottom" constant="16" id="xDL-35-jjB"/>
+                                    <constraint firstItem="N2a-pX-EFY" firstAttribute="leading" secondItem="N9D-mn-JPy" secondAttribute="leading" id="xUb-1i-7eH"/>
+                                    <constraint firstItem="1Qh-CS-jWK" firstAttribute="width" secondItem="ker-zZ-Ohy" secondAttribute="width" id="ylX-lP-JuR"/>
+                                    <constraint firstItem="u10-kZ-8N1" firstAttribute="top" secondItem="ker-zZ-Ohy" secondAttribute="bottom" constant="16" id="yqQ-Vb-lto"/>
+                                    <constraint firstItem="p4o-4D-5ZE" firstAttribute="leading" secondItem="ker-zZ-Ohy" secondAttribute="trailing" constant="16" id="zqT-x3-dmo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YoU-V7-fs7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VXY-KA-v3P" firstAttribute="top" secondItem="YoU-V7-fs7" secondAttribute="top" id="FGR-qk-5Lc"/>
+                            <constraint firstAttribute="bottom" secondItem="VXY-KA-v3P" secondAttribute="bottom" id="asL-70-gHf"/>
+                            <constraint firstItem="VXY-KA-v3P" firstAttribute="leading" secondItem="YoU-V7-fs7" secondAttribute="leading" id="gQ2-Gw-svC"/>
+                            <constraint firstAttribute="trailing" secondItem="VXY-KA-v3P" secondAttribute="trailing" id="udO-ns-fM2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="result" destination="N9D-mn-JPy" id="UpR-1a-mrF"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8nk-DX-uRW" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1261" y="84"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
