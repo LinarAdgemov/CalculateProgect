@@ -13,6 +13,7 @@ import UIKit
 class ViewController: UIViewController {
     var firstDigit : Double = 0
     var secondDigit : Double = 0
+    //todo переделать на enum
     var operationSign = ""
     var startOfNumber = true
     var firstDigitIsGiven = false
