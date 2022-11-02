@@ -255,7 +255,7 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="equals:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="sAN-OH-Fq3"/>
+                                            <action selector="equalDidPressed:" destination="5tT-ZO-VaL" eventType="touchUpInside" id="oUx-GY-91F"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -358,7 +358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nk-DX-uRW" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1261" y="84"/>
+            <point key="canvasLocation" x="836" y="-67"/>
         </scene>
     </scenes>
     <resources>
